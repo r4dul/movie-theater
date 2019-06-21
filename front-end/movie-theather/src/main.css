@@ -1,0 +1,190 @@
+.main {
+  padding: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.main .card {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30%;
+  }
+  .sidebar-filter {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 38%;
+  }
+}
+
+.card-img-top {
+  position: relative;
+  display: inline-block;
+}
+
+.card-img-top:before {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  content: "\f01d";
+  font-family: FontAwesome;
+  font-size: 100px;
+  color: #fff;
+  opacity: .8;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top:hover:before {
+  color: #eee;
+}
+
+.row .btn {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.row .btn:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+
+.watch-div {
+  width: 100%;
+  text-align: center;
+}
+
+.watchlist {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.watchlist::before, .watchlist::after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.watchlist::before {
+  background: black;
+  height: 105%;
+  z-index: -1;
+  left: -20px;
+  right: -20px;
+  border: none;
+}
+
+.watchlist::after {
+  background: #f1f1f1;
+  height: 100%;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
+  z-index: -2;
+  border: none;
+  opacity: 0.17;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.btn-success {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-success::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.btn-success:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.btn-danger {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-danger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  -webkit-transition: -webkit-transform 300ms ease-in;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.btn-danger:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.comment-message-box textarea:focus {
+  background-color: rgba(241, 245, 13, 0.4);
+}
+
+.comment-message-box textarea:focus .comment-message-box {
+  background-image: url(logo/comment-bg.jpeg);
+}
+/*# sourceMappingURL=main.css.map */

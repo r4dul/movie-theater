@@ -1,0 +1,114 @@
+@media (min-width: 1200px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "image text";
+  }
+}
+
+main section#image {
+  margin: 0em auto;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  main section#image {
+    grid-area: image;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  main section#text {
+    grid-area: text;
+    text-align: left;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+main section#text h1 {
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  main section#text h1 {
+    width: 75%;
+    font-size: 4em;
+  }
+}
+
+main section#text h4 {
+  color: white;
+  text-align: right;
+  padding: 10px;
+}
+
+@media (min-width: 1200px) {
+  main section#text h4 {
+    text-align: left;
+  }
+}
+
+main section#text h5 {
+  color: white;
+  padding: 10px;
+}
+
+main section#text ol {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+main section#text ol li strong {
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+main section#text ol li p {
+  color: white;
+  padding: 10px;
+}
+
+@-webkit-keyframes yourAnimation {
+  0% {
+    -webkit-transform: rotate(0) translateY(-50px);
+            transform: rotate(0) translateY(-50px);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes yourAnimation {
+  0% {
+    -webkit-transform: rotate(0) translateY(-50px);
+            transform: rotate(0) translateY(-50px);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+main .rounded {
+  -webkit-animation: yourAnimation 3s forwards 0s linear;
+          animation: yourAnimation 3s forwards 0s linear;
+}
+/*# sourceMappingURL=test.css.map */

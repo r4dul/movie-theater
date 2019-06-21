@@ -1,0 +1,7 @@
+{
+  "apiUrl": "http://localhost:8090/api/",
+  "loginUrl": "http://localhost:8090/",
+  "movieUrl": "http://localhost:3000/movie/",
+  "verifyEmail": "http://localhost:8090/api/users/confirm-account",
+  "usersUrl": "http://localhost:8090/api/users/"
+}

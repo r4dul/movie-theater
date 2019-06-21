@@ -1,0 +1,113 @@
+
+$desktop:1200px;
+@mixin desktop {
+    @media (min-width: #{$desktop} ){
+        @content;
+    }
+}
+
+main{
+
+    @include desktop {
+        display: grid;
+        grid-template-columns:  auto;
+        grid-template-areas: "image text";
+    }
+    
+    section#image{
+        margin: 0em auto;
+        padding: 20px;
+        text-align: center;
+        
+
+        @include desktop{
+            grid-area: image;
+            height: fit-content;
+            
+            margin:1em;
+        }
+        
+    }
+
+    section#text{
+
+        @include desktop{
+            grid-area: text;
+            text-align: left;
+            height: fit-content;
+            
+        }
+        
+        h1 {
+            color:white;
+            text-align: center;
+
+            @include desktop{
+                width: 75%;
+                font-size: 4em;
+                
+            }
+        }
+
+        h4 {
+            color: white;
+            text-align: right;
+            
+            padding: 10px;
+
+            @include desktop {
+                text-align: left;
+            }
+            
+        }
+
+        h5 {
+            color: white;
+            padding: 10px;
+        }
+        ol {
+            list-style-position: inside;
+            
+            margin:0;
+            padding: 0;
+
+            li {
+                //margin-bottom: 10px;
+            
+
+                strong {
+                    color: white;
+                     display: inline-block;
+                    margin-top: 5px;
+                    margin-left: max(50px);
+                }
+
+                p{
+                    color: white;
+                    padding: 10px;
+                }
+
+                
+            }
+        }
+
+       
+        
+        
+    }
+
+    @keyframes yourAnimation{
+        0%{
+            transform: rotate(0) translateY(-50px);
+            opacity: 0.4;
+            }
+        100%{
+            transform: rotate(0) translateY(0);
+            opacity: 1;
+            }
+    }
+    
+    .rounded{
+        animation: yourAnimation 3s forwards 0s linear;
+    }
+}
